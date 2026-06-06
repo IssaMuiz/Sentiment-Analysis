@@ -3,8 +3,20 @@
 
 ## Overview
 
-Sentiment analysis of customer reviews for a movie using a machine learning and natural language processing (NLP pipeline. The project includes data collection, preprocessing, model training, evaluation, and deployment of a sentiment analysis system to classify customer reviews as positive, and negative. The system is designed to help movie producers understand customer feedback and improve their movies production based on sentiment insights.
+This project is a Sentiment Analysis system built using Natural Language Processing (NLP) techniques and Machine Learning. The goal is to classify movie reviews as either positive or negative based on the text content.
 
+The project follows a complete ML pipeline including data cleaning, text preprocessing, feature extraction using TF-IDF vectorization, and model training using Logistic Regression. The trained model can predict sentiment from unseen text inputs.
+
+This project is designed for learning and practical experience in NLP and demonstrates how raw text data can be transformed into meaningful features for machine learning models. It also includes a simple structure that can be extended into a deployable web application using Streamlit.
+
+## Key Features
+
+* Text preprocessing (cleaning, tokenization, stopword removal, lemmatization)
+* TF-IDF feature extraction
+* Sentiment classification using Logistic Regression
+* Model evaluation and accuracy measurement
+* End-to-end NLP pipeline implementation
+* Ready for deployment (Streamlit/FastAPI extension)
 
 ## Dataset
  or Text analytics.
@@ -17,16 +29,20 @@ The dataset used for this project is a IMDB dataset having 50,000 movie reviews 
 
 ### 1. Data Cleaning and Processing
 
-* Data was loaded and cleaned, checking if there is any null values, and dropped the duplicated rows which are 418 rows
+* Data was loaded and cleaned, checking if there is any null values, and dropped the duplicated rows which are 418 rows, the dataset shape is now 49,582 columns and 2 rows
+* Text preprocessing was performed using lowercasing, lemmatization, stopwords, and tokenization.
+* Then another column ("cleaned_review") was created to store the preprocessed text and it was check side by side with the review column to confirm if the preprocess actually work.
+* Another column was created ("encoded_sentiment") for sentiment encoding, 1 for positive and 0 for negative
+* The dataset shape is now 49582 rows and 4 columns
+* The dataset was splitted into training and testing set, 80/20 percent split was used, training set consists of 39665 rows and testing set consists of 9917 rows
 
 
 ## Project Steps
 
 - Data collection and loading
-- Data cleaning and preprocessing
-- Exploratory data analysis (EDA)
+- Data cleaning and text preprocessing
 - Data splitting
-- Feature engineering
+- Vectorization (TF-IDF)
 - Baseline modeling
 - Error analysis
 - hyperparameter tuning and model optimization
