@@ -42,14 +42,18 @@ The dataset used for this project is a IMDB dataset having 50,000 movie reviews 
 ### 3. Baseline Modelling (LogisticRegression)
 * The baseline model was trained using LogisticeRegression
 * The overall performance of the model is 88% accuracy which is a good headstart for the baseline
-* Then we have the full classification as:
+
+
+Then we have the full classification as:
 | Metric   | Positive  | Negative  |
 | -------- | --------- | ----------|
 | Precision| 0.87      |  0.89     |
 | Recall   | 0.90      |  0.87     |
 
+
+
 ### 4. Error Analysis
-* The confusion matrix was observed:
+The confusion matrix was observed:
                  Predicted
 
               Negative  Positive
