@@ -36,6 +36,34 @@ The dataset used for this project is a IMDB dataset having 50,000 movie reviews 
 * The dataset shape is now 49582 rows and 4 columns
 * The dataset was splitted into training and testing set, 80/20 percent split was used, training set consists of 39665 rows and testing set consists of 9917 rows
 
+### 2. Vectorization (TF-IDF)
+* Term-frequency - Inverse Document Frequency known as TF-IDF was used as the vectorizatio method for this dataset and the max_features was set to 5000 words in order to reduce noise and avoid overfitting
+
+### 3. Baseline Modelling (LogisticRegression)
+* The baseline model was trained using LogisticeRegression
+* The overall performance of the model is 88% accuracy which is a good headstart for the baseline
+* Then we have the full classification as:
+| Metric   | Positive  | Negative  |
+| -------- | --------- | ----------|
+| Precision| 0.87      |  0.89     |
+| Recall   | 0.90      |  0.87     |
+
+### 4. Error Analysis
+* The confusion matrix was observed:
+                 Predicted
+
+              Negative  Positive
+
+Actual Negative  4287      652
+
+Actual Positive   513      4465
+
+* The total predicted reviews are 9917 reviews
+* The model is making mistake of False postive of 652 reviews, negative reviews predicted as positive review
+* False negative of 513 reviews, positive reviews predicted as negative reviews
+* The total correct prediction is 8752 reviews
+* The total wrong prediction is 1165 reviews
+* Improvement to this model will be conducted and evaluated in the next version
 
 ## Project Steps
 
@@ -45,12 +73,14 @@ The dataset used for this project is a IMDB dataset having 50,000 movie reviews 
 - Vectorization (TF-IDF)
 - Baseline modeling
 - Error analysis
-- hyperparameter tuning and model optimization
-- Final evaluation (test set)
-- Build full preprocessing + model pipeline
+- Model Pipeline
 - Artifact creation
-- Unit testing
 - Model packaging and deployment readiness
+- Baseline model deployment
+- hyperparameter tuning and model optimization
+- Final evaluation
+- Unit testing
+- New model deploymnent
 - Monitoring and maintenance plan
 
 

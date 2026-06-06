@@ -1,5 +1,5 @@
 import pandas as pd
-from src.data_preprocessing import preprocess_text
+from src.text_preprocessing import preprocess_text
 
 
 def cleaned_review(df: pd.DataFrame):

@@ -1,13 +1,5 @@
 import pandas as pd
 
-import re
-import nltk
-from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
-
-stop_words = set(stopwords.words("english"))
-lemmatizer = WordNetLemmatizer()
-
 
 def load_data(file_path):
     """
@@ -40,23 +32,3 @@ def drop_duplicates(df):
     final_shape = df.shape
     print(f"Dropped {initial_shape[0] - final_shape[0]} duplicate rows.")
     return df
-
-
-def preprocess_text(text):
-
-    # lowercase
-    text = text.lower()
-
-    # remove html tags
-    text = re.sub(r"<.*?>", "", text)
-
-    # remove non-letters
-    text = re.sub(r"[^a-zA-Z\s]", "", text)
-
-    # tokenize
-    words = text.split()
-
-    # remove stopwords and lemmatize
-    words = [lemmatizer.lemmatize(word) for word in words if word not in stop_words]
-
-    return " ".join(words)  # Join the list of words back into a single string

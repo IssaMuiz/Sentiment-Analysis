@@ -27,6 +27,6 @@ def split_features_and_target(df: pd.DataFrame):
         df (pd.DataFrame): The input DataFrame containing the features and target variable.
     Returns: tuple: A tuple containing the features DataFrame (X) and target variable Series (y).
     """
-    X = df.drop(columns=["sentiment", "encoded_sentiment", "review"])
+    X = df["cleaned_review"]
     y = df["encoded_sentiment"]
     return X, y
