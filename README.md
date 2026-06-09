@@ -54,9 +54,9 @@ Then we have the full classification as:
 
 ### 4. Error Analysis
 The confusion matrix was observed:
-                 Predicted
+                 
 
-              Negative  Positive
+     Predicted  Negative  Positive
 
 Actual Negative  4287      652
 
