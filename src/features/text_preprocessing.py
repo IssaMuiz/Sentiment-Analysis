@@ -2,7 +2,6 @@ import re
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.base import BaseEstimator, TransformerMixin
 
 vectorizer = TfidfVectorizer(max_features=5000)
 
@@ -28,5 +27,3 @@ def preprocess_text(text):
     words = [lemmatizer.lemmatize(word) for word in words if word not in stop_words]
 
     return " ".join(words)  # Join the list of words back into a single string
-
-
