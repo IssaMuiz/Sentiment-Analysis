@@ -69,6 +69,25 @@ Actual Positive   513      4465
 * The total wrong prediction is 1165 reviews
 * Improvement to this model will be conducted and evaluated in the next version
 
+### 5. Model pipeline building
+This project uses a Scikit-Learn Machine Learning Pipeline to streamline the entire sentiment analysis workflow from raw text to prediction.
+
+The pipeline combines all preprocessing and modeling steps into a single reusable object.
+
+- Pipeline Steps
+  
+1. Text Preprocessing
+ - Cleaning of raw text (lowercasing, removing noise, etc.)
+ - Implemented using a custom preprocessing function wrapped with FunctionTransformer
+
+2. Feature Extraction
+ - TF-IDF Vectorization
+ - Converts text into numerical features
+
+3. Model Training
+ - Logistic Regression classifier
+ - Trained on TF-IDF features 
+
 ## Project Steps
 
 - Data collection and loading
