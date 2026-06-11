@@ -1,0 +1,1 @@
+{"model_name": "Sentiment Analysis Model", "model_type": "Random Forest", "version": "1", "metrics": {"accuracy": 0.883029141877584, "precision": 0.8833133069402244, "recall": 0.883029141877584, "f1": 0.8830000810638072}, "dataset": {"name": "IMDB Movie Reviews", "size": 49582}, "preprocessing": {"vectorizer": "TfidfVectorizer", "max_features": 5000}, "trained_at": "2026-06-11"}

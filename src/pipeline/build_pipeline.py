@@ -6,6 +6,10 @@ from sklearn.preprocessing import FunctionTransformer
 from src.features.text_preprocessing import preprocess_text
 
 
+def preprocess_batch(X):
+    return [preprocess_text(text) for text in X]
+
+
 def build_pipeline():
     """
     Build a machine learning pipeline that includes text preprocessing,
@@ -16,15 +20,11 @@ def build_pipeline():
     """
     try:
 
-        preprocessor = FunctionTransformer(
-            lambda X: [preprocess_text(text) for text in X]
-        )
-
         pipeline = Pipeline(
             steps=[
                 (
                     "preprocess_text",
-                    preprocessor,
+                    FunctionTransformer(preprocess_batch),
                 ),
                 ("tfidf_vectorizer", TfidfVectorizer(max_features=5000)),
                 ("model", LogisticRegression()),

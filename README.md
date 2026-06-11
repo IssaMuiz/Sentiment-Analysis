@@ -88,6 +88,20 @@ The pipeline combines all preprocessing and modeling steps into a single reusabl
  - Logistic Regression classifier
  - Trained on TF-IDF features 
 
+### Model Artifacts & Registry
+
+This project uses a Model Registry system to manage trained models and their associated metadata in a structured and reproducible way.
+
+After training, the model is saved as a single deployable artifact along with its evaluation metrics and training configuration.
+
+- What gets saved as an artifact
+
+ - Each model version includes:
+     1. Trained ML Pipeline (Preprocessing + TF-IDF + Classifier)
+     2. Evaluation Metrics (Accuracy, Precision, Recall, F1-score)
+     3. Model Metadata (model type, version, dataset info, training date)
+
+   
 ## Project Steps
 
 - Data collection and loading
