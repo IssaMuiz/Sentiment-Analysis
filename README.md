@@ -42,6 +42,7 @@ The dataset used for this project is a IMDB dataset having 50,000 movie reviews 
 ### 3. Baseline Modelling (LogisticRegression)
 * The baseline model was trained using LogisticeRegression
 * The overall performance of the model is 88% accuracy which is a good headstart for the baseline
+* The roc-auc score was added to the evaluation metrics, 95% roc-auc was recorded, which indicates the model perform great across all thresholds
 
 
 Then we have the full classification as:
@@ -101,7 +102,7 @@ After training, the model is saved as a single deployable artifact along with it
      2. Evaluation Metrics (Accuracy, Precision, Recall, F1-score)
      3. Model Metadata (model type, version, dataset info, training date)
 
-   
+
 ## Project Steps
 
 - Data collection and loading
