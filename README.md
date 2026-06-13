@@ -35,6 +35,8 @@ The dataset used for this project is a IMDB dataset having 50,000 movie reviews 
 * Another column was created ("encoded_sentiment") for sentiment encoding, 1 for positive and 0 for negative
 * The dataset shape is now 49582 rows and 4 columns
 * The dataset was splitted into training and testing set, 80/20 percent split was used, training set consists of 39665 rows and testing set consists of 9917 rows
+* The dataset was further splitted into train, validation and test set, hyperparameter tuning will be done on the validation set to avoid data leakage, and the test set will be use for the final evaluation
+* The train set consists of 34707 rows (70% of the dataset), validation set consists of 7437 rows (15% of the dataset) and the test set consists of 7438 rows (15% of the dataset)
 
 ### 2. Vectorization (TF-IDF)
 * Term-frequency - Inverse Document Frequency known as TF-IDF was used as the vectorizatio method for this dataset and the max_features was set to 5000 words in order to reduce noise and avoid overfitting
@@ -59,16 +61,16 @@ The confusion matrix was observed:
 
      Predicted  Negative  Positive
 
-Actual Negative  4287      652
+Actual Negative  3252      476
 
-Actual Positive   513      4465
+Actual Positive   382      3327
 
-* The total predicted reviews are 9917 reviews
-* The model is making mistake of False postive of 652 reviews, negative reviews predicted as positive review
-* False negative of 513 reviews, positive reviews predicted as negative reviews
-* The total correct prediction is 8752 reviews
-* The total wrong prediction is 1165 reviews
-* Improvement to this model will be conducted and evaluated in the next version
+* The total predicted reviews are 7437 reviews
+* The model is making mistake of False postive of 476 reviews, negative reviews predicted as positive review
+* False negative of 382 reviews, positive reviews predicted as negative reviews
+* The total correct prediction is 6579 reviews
+* The total wrong prediction is 858 reviews
+
 
 ### 5. Model pipeline building
 This project uses a Scikit-Learn Machine Learning Pipeline to streamline the entire sentiment analysis workflow from raw text to prediction.
@@ -113,12 +115,10 @@ After training, the model is saved as a single deployable artifact along with it
 - Error analysis
 - Model Pipeline
 - Artifact creation
-- Model packaging and deployment readiness
-- Baseline model deployment
+- models comparison and selection
 - hyperparameter tuning and model optimization
-- Final evaluation
 - Unit testing
-- New model deploymnent
+- Model packaging and deployment readiness
 - Monitoring and maintenance plan
 
 

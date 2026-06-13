@@ -25,13 +25,15 @@ class TrainModel:
         """
         return self.pipeline.predict(X_test)
 
-    def evaluate(self, X_test, y_test):
+    def evaluate(self, X_test, y_test, X_train, y_train):
         """
         Evaluate the model's performance on the test data.
         """
         y_pred = self.predict(X_test)
         y_pred_proba = self.pipeline.predict_proba(X_test)[:, 1]
+        train_score = self.pipeline.score(X_train, y_train)
         evaluation_results = {
+            "train_score": train_score,
             "accuracy": accuracy_score(y_test, y_pred),
             "precision": precision_score(y_test, y_pred, average="weighted"),
             "recall": recall_score(y_test, y_pred, average="weighted"),

@@ -30,5 +30,5 @@ def drop_duplicates(df):
     initial_shape = df.shape
     df = df.drop_duplicates()
     final_shape = df.shape
-    print(f"Dropped {initial_shape[0] - final_shape[0]} duplicate rows.")
+    print(f"Dropped {initial_shape[0] - final_shape[0]} duplicated rows.")
     return df

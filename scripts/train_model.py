@@ -9,12 +9,12 @@ model = train_model.fit(X_train, y_train)
 
 registry.save_model(
     model,
-    "RandomForest_v1",
+    "RandomForest",
     metadata={
         "model_name": "Sentiment Analysis Model",
         "model_type": "Random Forest",
         "version": "1",
-        "metrics": train_model.evaluate(X_test, y_test),
+        "metrics": train_model.evaluate(X_test, y_test, X_train, y_train),
         "dataset": {"name": "IMDB Movie Reviews", "size": 49582},
         "preprocessing": {
             "vectorizer": "TfidfVectorizer",
