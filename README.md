@@ -39,7 +39,7 @@ The dataset used for this project is a IMDB dataset having 50,000 movie reviews 
 * The train set consists of 34707 rows (70% of the dataset), validation set consists of 7437 rows (15% of the dataset) and the test set consists of 7438 rows (15% of the dataset)
 
 ### 2. Vectorization (TF-IDF)
-* Term-frequency - Inverse Document Frequency known as TF-IDF was used as the vectorizatio method for this dataset and the max_features was set to 5000 words in order to reduce noise and avoid overfitting
+* Term-frequency - Inverse Document Frequency known as TF-IDF was used as the vectorization method for this dataset and the max_features was set to 5000 words, ngram_range(1, 2) in order to reduce noise, avoid overfitting and better generalization
 
 ### 3. Baseline Modelling (LogisticRegression)
 * The baseline model was trained using LogisticeRegression
@@ -57,13 +57,6 @@ Then we have the full classification as:
 
 ### 4. Error Analysis
 The confusion matrix was observed:
-                 
-
-     Predicted  Negative  Positive
-
-Actual Negative  3252      476
-
-Actual Positive   382      3327
 
 * The total predicted reviews are 7437 reviews
 * The model is making mistake of False postive of 476 reviews, negative reviews predicted as positive review
