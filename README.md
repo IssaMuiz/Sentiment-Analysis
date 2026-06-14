@@ -105,6 +105,26 @@ After training, the model is saved as a single deployable artifact along with it
      3. Model Metadata (model type, version, dataset info, training date)
 
 
+### Model Comparison and Selection
+
+| Model               | Train Score | Accuracy  | F1        | ROC-AUC   | Generalization   |
+| ------------------- | ----------- | --------- | --------- | --------- | ---------------- |
+| Linear SVC          | 0.934       | 0.878     | 0.878     | 0.948     | Good             |
+| Logistic Regression | 0.913       | **0.888** | **0.888** | **0.954** | **Best balance** |
+| Multinomial NB      | 0.866       | 0.853     | 0.853     | 0.929     | Weakest          |
+| Random Forest       | 1.000       | 0.846     | 0.846     | 0.922     | Overfitting      |
+
+* This is the comparison analysis for all the model used for the sentiment analysis dataset training. The models were compared using Accuracy, Precision, Recall, F1-score, and ROC-AUC on the validation set.
+
+* **Logistic Regression** achieved the best overall performance with the highest accuracy (0.888) and ROC-AUC (0.954), showing strong generalization.
+* **Linear SVC** performed closely behind with slightly lower accuracy but a strong ROC-AUC score (0.947).
+* **Multinomial Naive Bayes** provided a solid baseline but lagged behind linear models in overall performance.
+* **Random Forest** showed clear overfitting and performed the weakest on this text-based TF-IDF representation.
+
+* Logistic Regression was selected as the final model due to its best balance of performance, stability, and efficiency for deployment.
+
+* Hyperparameter tuning and model optimization will be done using the selected model (Logistic Regression) 
+
 ## Project Steps
 
 - Data collection and loading

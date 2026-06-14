@@ -1,0 +1,26 @@
+{
+    "project_name": "Sentiment Analysis Model",
+    "model_type": "linear_svc",
+    "version": "1",
+    "metrics": {
+        "train_score": 0.9339038234361944,
+        "accuracy": 0.8783111469678634,
+        "precision": 0.8784974958885916,
+        "recall": 0.8783111469678634,
+        "f1": 0.8783000969716844,
+        "roc_auc": 0.9476414955154902
+    },
+    "dataset": {
+        "name": "IMDB Movie Reviews",
+        "size": 49582
+    },
+    "preprocessing": {
+        "vectorizer": "TfidfVectorizer",
+        "max_features": 5000,
+        "ngram_range": [
+            1,
+            2
+        ]
+    },
+    "trained_at": "2026-06-11"
+}

@@ -3,7 +3,7 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-vectorizer = TfidfVectorizer(max_features=5000)
+vectorizer = TfidfVectorizer(max_features=5000, ngram_range=(1, 2))
 
 stop_words = set(stopwords.words("english"))
 lemmatizer = WordNetLemmatizer()
