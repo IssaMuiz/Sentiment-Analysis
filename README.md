@@ -118,6 +118,12 @@ After training, the model is saved as a single deployable artifact along with it
 
 * Hyperparameter tuning and model optimization will be done using the selected model (Logistic Regression) 
 
+
+### Hyperparameter tuning
+* Hyperparameter tuning was performed using GridSearchCV on the best-performing model (Logistic Regression) to optimize performance. The search focused on key parameters such as C, TF-IDF ngram_range, and max_features, using cross-validation for reliable evaluation.
+
+* Although tuning confirmed stable performance (AUC-ROC 0.953910382017343), it did not provide a significant improvement over the baseline model (AUC-ROC 0.954). The final selected model remains the baseline Logistic Regression due to its strong and consistent results. 
+
 ## Project Steps
 
 - Data collection and loading
@@ -131,7 +137,7 @@ After training, the model is saved as a single deployable artifact along with it
 - models comparison and selection
 - hyperparameter tuning and model optimization
 - Unit testing
-- Model packaging and deployment readiness
+- Model packaging and deployment
 - Monitoring and maintenance plan
 
 

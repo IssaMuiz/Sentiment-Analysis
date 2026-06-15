@@ -1,5 +1,5 @@
 from src.model_registry import ModelRegistry
-from src.model.train import TrainModel
+from src.model.trainer import TrainModel
 from scripts.prepare_data import X_train, y_train, X_val, y_val
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import LinearSVC
