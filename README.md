@@ -124,6 +124,12 @@ After training, the model is saved as a single deployable artifact along with it
 
 * Although tuning confirmed stable performance (AUC-ROC 0.953910382017343), it did not provide a significant improvement over the baseline model (AUC-ROC 0.954). The final selected model remains the baseline Logistic Regression due to its strong and consistent results. 
 
+### Unit Testing
+
+Unit tests were implemented using Pytest to validate key components of the machine learning pipeline. Tests cover text preprocessing, model training, prediction, and model registry functionality to ensure the system behaves as expected and remains reliable during development and deployment.
+
+
+
 ## Project Steps
 
 - Data collection and loading
