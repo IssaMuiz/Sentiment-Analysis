@@ -25,6 +25,23 @@ This project is designed for learning and practical experience in NLP and demons
 The dataset used for this project is a IMDB dataset having 50,000 movie reviews for natural language processing. This is a dataset for binary sentiment classification. This dataset consists of 25,000 positive sentiment and 25,000 negative sentiment, it has two columns which are review and sentiment. The dataset can be downloaded using this link https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews?utm_source=chatgpt.com
 
 
+## Project Steps
+
+- Data collection and loading
+- Data cleaning and text preprocessing
+- Data splitting
+- Vectorization (TF-IDF)
+- Baseline modeling
+- Error analysis
+- Model Pipeline
+- Artifact creation
+- models comparison and selection
+- hyperparameter tuning and model optimization
+- Unit testing
+- Model packaging and deployment
+- Monitoring and maintenance plan
+
+
 ## Current Progress
 
 ### 1. Data Cleaning and Processing
@@ -141,31 +158,30 @@ This project is containerized using Docker to ensure consistent execution across
 
 Docker packages the FastAPI application, trained machine learning model, and all dependencies into a single portable container.
 
-## Project Steps
+#### Deployment
+The model is deployed using Docker + Render, providing a public REST API endpoint for real-time inference.
 
-- Data collection and loading
-- Data cleaning and text preprocessing
-- Data splitting
-- Vectorization (TF-IDF)
-- Baseline modeling
-- Error analysis
-- Model Pipeline
-- Artifact creation
-- models comparison and selection
-- hyperparameter tuning and model optimization
-- Unit testing
-- Model packaging and deployment
-- Monitoring and maintenance plan
 
+### Limitations
+
+The model uses a traditional TF-IDF + linear classifier approach, which may struggle with complex linguistic patterns such as:
+
+Negation handling (e.g., “I don’t like this movie”)
+Sarcasm or contextual sentiment shifts
+
+This is a known limitation of bag-of-words style models.
+
+
+### Access Api
+https://movie-review-sentiment-analysis-in1h.onrender.com/docs#/default/predict_sentiment_predict_post
 
 
 ## Contribution
 
-This is currently a personal MVP project. Contributions, ideas, and feedback are welcome.
+ML Engineer Portfolio Project — Built to demonstrate production-ready machine learning deployment skills.
 
 
-
-## 👤 Author
+## Author
 
 Built by Issa Muiz
 Machine Learning & Deep Learning Enthusiast

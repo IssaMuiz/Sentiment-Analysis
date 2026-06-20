@@ -3,14 +3,18 @@ from src.model.trainer import TrainModel
 from scripts.prepare_data import X_train, y_train, X_val, y_val
 from sklearn.linear_model import LogisticRegression
 
+# an instance of the modelregistry class
 registry = ModelRegistry()
 
+# Iniitializing and training the final best model choosen
 model = LogisticRegression()
 model_name = "logistic_regression"
 train_model = TrainModel(model)
 
+# fit the model
 model = train_model.fit(X_train, y_train)
 
+# save the model
 registry.save_model(
     model,
     model_name,
