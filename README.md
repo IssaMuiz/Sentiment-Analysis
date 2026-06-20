@@ -129,6 +129,17 @@ After training, the model is saved as a single deployable artifact along with it
 Unit tests were implemented using Pytest to validate key components of the machine learning pipeline. Tests cover text preprocessing, model training, prediction, and model registry functionality to ensure the system behaves as expected and remains reliable during development and deployment.
 
 
+### Model Packaging and Deployment
+
+#### FastApi
+The machine learning model is deployed using FastAPI, providing a lightweight and high-performance REST API for real-time sentiment prediction.
+
+The API loads a pre-trained and saved machine learning pipeline from the model registry, ensuring consistent inference without retraining.
+
+#### Dockerization
+This project is containerized using Docker to ensure consistent execution across different environments (local machine, cloud, or production servers).
+
+Docker packages the FastAPI application, trained machine learning model, and all dependencies into a single portable container.
 
 ## Project Steps
 
