@@ -1,3 +1,5 @@
+[![CI](https://github.com/IssaMuiz/Sentiment-Analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/IssaMuiz/Sentiment-Analysis/actions/workflows/ci.yml)
+
 # Sentiment Analysis of Customer Reviews for a Movie
 
 
@@ -160,6 +162,18 @@ Docker packages the FastAPI application, trained machine learning model, and all
 
 #### Deployment
 The model is deployed using Docker + Render, providing a public REST API endpoint for real-time inference.
+
+### CI/CD
+
+This project uses GitHub Actions for Continuous Integration (CI).
+
+On every push or pull request to the main branch, GitHub Actions:
+
+1. Installs project and testing dependencies
+2. Downloads required NLTK resources
+3. Runs the test suite using pytest
+
+Render handles Continuous Deployment (CD). After the CI checks pass, Render rebuilds and deploys the latest Docker image automatically.
 
 
 ### Limitations
