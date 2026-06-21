@@ -1,21 +1,19 @@
-name: CI
+﻿name: CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-test:
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v4
-
-
-  - uses: actions/setup-python@v5
-    with:
-      python-version: '3.10'
-
-  - run: pip install -r requirements.txt
-
-  - run: python -m nltk.downloader stopwords wordnet omw-1.4
-
-  - run: pytest
-
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: pip install -r requirements.txt
+      - run: python -m nltk.downloader stopwords wordnet omw-1.4
+      - run: pytest
